@@ -36,6 +36,7 @@ func Read() (Config, error) {
 	if err != nil {
 		return Config{}, err
 	}
+
 	return cfg, nil
 }
 
@@ -44,7 +45,6 @@ func getConfigFilePath() (string, error) {
 	if err != nil {
 		return "", err
 	}
-
 	fullPath := filepath.Join(home, configFileName)
 	return fullPath, nil
 }
