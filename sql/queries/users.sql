@@ -11,8 +11,11 @@ RETURNING *;
 -- name: GetUser :one
 SELECT * FROM users WHERE name = $1;
 
--- name: DeleteAllUsers :exec
+-- name: DeleteUsers :exec
 DELETE FROM users;
 
 -- name: GetUsers :many
-SELECT * from users;
+SELECT * FROM users;
+
+-- name: GetUserById :one
+SELECT * FROM users WHERE id = $1;
